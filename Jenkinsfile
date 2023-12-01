@@ -7,7 +7,13 @@ pipeline {
         stage('setup') {
             steps {
                 sh 'node --version'
+                sh 'npm ci'
             }
+        }
+        stage('build') {
+          steps {
+            sh 'npm run build && npm run test:unit'
+          }
         }
     }
 }
