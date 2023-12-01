@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/functions-framework": "^3.3.0",
     "@types/node": "^20.10.1",
     "jest": "^29.7.0"
   }

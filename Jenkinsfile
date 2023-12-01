@@ -10,9 +10,14 @@ pipeline {
                 sh 'npm ci'
             }
         }
-        stage('build') {
+        stage('test') {
           steps {
             sh 'npm run build && npm run test:unit'
+          }
+        }
+        stage('deploy') {
+          steps {
+            sh 'gcloud --version'
           }
         }
     }
